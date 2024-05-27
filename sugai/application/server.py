@@ -1,5 +1,5 @@
 #起動ファイルの作成(実行)
 from flask_blog import app
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == '__main__':  #このファイルが直接実行されたとき(python server.pyとターミナルで実行したとき)に実行される処理を書く
+    app.run()
