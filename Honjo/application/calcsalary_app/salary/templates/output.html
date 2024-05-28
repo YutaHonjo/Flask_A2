@@ -1,0 +1,10 @@
+{% extends "layout.html" %} {% block body %}
+<!-- 給与計算アプリ
+給与：○円の場合、支給額：○、税額：○円です。
+戻るボタンを押すと入力が円へ遷移 -->
+<div>給与計算アプリ</div>
+<div>給与：{{salary}}円の場合、支給額：{{payment}}円、税額：{{tax}}円です。</div>
+<a href="{{url_for('calc_salary')}}">
+    <button>戻る</button>
+</a>
+{% endblock %}
