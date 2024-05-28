@@ -1,0 +1,6 @@
+DEBUG=True
+USERNAME='yuta'
+PASSWORD='password'
+SECRET_KEY='secret key'
+SQLALCHEMY_DATABASE_URI='sqlite:///flask_blog.db'
+SQLALCHEMY_TRACK_MODIFICATIONS=True
