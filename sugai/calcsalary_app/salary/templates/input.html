@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="{{ url_for('calcsalary')}}" method="POST">
+    <div class="form-group">
+        <label for = "InputTitle">給与</label>
+        <input type="number" class ="form-control" id ="InputTitle" name="salary" value={{a}}>
+        <p>{{salary}}</p>
+
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-info" role="alert">
+            <p>{{message}}</p>
+        </div>
+        {% endfor %}
+        
+    </div>
+    
+    
+
+    <input type="submit" class="btn btn-primary" value="計算する">
+</form>
+{% endblock %}
