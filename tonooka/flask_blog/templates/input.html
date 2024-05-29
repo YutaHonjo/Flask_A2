@@ -1,0 +1,11 @@
+<!-- 入力画面 -->
+{% extends "layout.html" %}<!--layout.htmlを継承する-->
+{% block body %}
+<form action="{{url_for('input')}}" method="post"><!--formが送信された際にinput.htmlにデータをPOSTメソッドで送信する-->
+    <div class="form-group">
+        <label for="InputTitle">給料</label>
+        <input type="text" class="form-control" id="InputTitle" name="salary"><!--name=salaryは入力フィールドの名前-->
+    </div>
+    <button type="submit" class="btn btn-primary">計算する</button><!--type=submit　このボタンが送信ボタンであることを示している　フォームが送信される-->
+</form>
+    {% endblock %}

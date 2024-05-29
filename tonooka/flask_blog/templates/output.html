@@ -1,0 +1,18 @@
+<!-- 結果画面 -->
+{% extends "layout.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>給料計算 結果</title>
+</head>
+<body>
+    <p>給料:{{ salary }}の場合</p>
+    <p>支給額：{{payment}}</p>
+    <p>税額：{{tax}}</p>
+    <form action="{{ url_for('input') }}" method="get">
+        <button type="submit" class="btn btn-primary">戻る</button>
+    </form>
+</body>
+</html>
+{% endblock %}
