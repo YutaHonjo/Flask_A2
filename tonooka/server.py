@@ -14,4 +14,4 @@ from flask_blog import app
 if __name__ == '__main__':
     app.run()
 
-import flask_blog.views
+import flask_blog.views.entries

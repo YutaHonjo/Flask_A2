@@ -1,5 +1,6 @@
 <!doctype html>
-<title>給料計算アプリ</title>
+<!-- <title>給料計算アプリ</title> -->
+<title>Flask_blog</title>
 
 <!-- ブートストラップ -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -24,6 +25,9 @@
                     <a class="nav-link" href="{{url_for('login')}}">ログイン</a> <!--ログインページへのURLを生成-->
                 </li>
                 {% else %}
+                <li class =""nav-item>
+                    <a class="nav-link" href="{{url_for('new_entry')}}">新規投稿</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('logout')}}">ログアウト</a> <!--ログアウトページへのURLを生成-->
                 </li>
