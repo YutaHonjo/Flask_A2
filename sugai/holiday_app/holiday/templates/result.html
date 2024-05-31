@@ -1,0 +1,22 @@
+<!-- 結果画面 -->
+{% extends "layout.html" %}
+{% block body %}
+<form action="{{ url_for('b')}}" method="POST">
+    
+    <div class="form-group">
+        <label for = "InputDate">祝日 日付</label>
+        <input type="date" class ="form-control" id ="InputDate" name="holiday">
+    </div>
+
+    <div class="form-group">
+        <label for = "InputText">祝日 テキスト</label>
+        <input type="text" class ="form-control" id ="InputText" name="holiday_text">
+    </div>
+    
+    <input type="submit" class="btn btn-primary" value="新規登録・更新">
+
+    <form action="{{ url_for('delete_entry', id=entry.id) }}" method="post">
+        <button type="submit" class="btn btn-dander" style="margin-left:5px">削除</button>
+    </form>
+</form>
+{% endblock %}
