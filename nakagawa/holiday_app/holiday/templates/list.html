@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+          <th>祝日</th>
+          <th>テキスト</th>
+        </tr>
+      </thead>
+    <tbody>
+{% for holiday in holidays %}
+    <tr>
+      <td>{{holiday.holi_date}}</td>
+      <td>{{holiday.holi_text}}</td>
+    </tr>
+
+{% else %}
+    <tr>
+        <td>データがありません</td>
+        <td>データがありません</td>
+    </tr>
+{% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}

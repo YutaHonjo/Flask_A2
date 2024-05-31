@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<br>
+<h6>処理結果</h6>
+<br>
+{{ holiday.holi_date }}は「{{ holiday.holi_text }}」に更新されました
+
+<br><br>
+
+<form action = "{{url_for('show_holiday')}}" method = get class = add-entry>
+    <button type = 'submit' class = 'btn btn-primary'>戻る</button>
+</form>
+{% endblock %}
