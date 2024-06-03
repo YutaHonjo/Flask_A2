@@ -1,3 +1,4 @@
+#フォームを定義　ユーザーがデータ入力をし、サーバーに送信するための場所
 from flask_wtf import FlaskForm
 from wtforms import DateField, StringField, SubmitField
 from wtforms.validators import DataRequired

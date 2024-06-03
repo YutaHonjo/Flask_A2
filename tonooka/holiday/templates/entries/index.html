@@ -1,4 +1,36 @@
-<!--入力画面-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holiday List</title>
+</head>
+<body>
+    <h1>Holiday List</h1>
+    <a href="{{ url_for('new_holiday') }}">Add New Holiday</a>
+    <table>
+        <tr>
+            <th>holi_date</th>
+            <th>holi_text</th>
+            <th></th>
+        </tr>
+        {% for holiday in holidays %}
+        <tr>
+            <td>{{ holiday.holi_date }}</td>
+            <td>{{ holiday.holi_text }}</td>
+            <td>
+                <a href="{{ url_for('edit_holiday', id=holiday.id) }}">Edit</a>
+                <form action="{{ url_for('delete_holiday', id=holiday.id) }}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+
+<!-- 入力画面
 {% extends "layout.html" %}
 {% block body %}
 <ul class="list-group list-group-flush">
@@ -14,4 +46,5 @@
         投稿がありません
         {% endfor %}
         </ul>
-        {% endblock %}
+        {% endblock %} -->
+

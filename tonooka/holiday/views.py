@@ -3,11 +3,18 @@ from flask import Flask, render_template, request
 from holiday import app
 import holiday
 from holiday import db
+from models import db, Holiday
+# from forms import HolidayForm
 
 
+# app = Flask(__name__)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///holiday.db'
+# app.config['SECRET_KEY'] = 'your_secret_key'
+# db.init_app(app)
 
 @app.route('/')
 def show_entries():
+    holidays = Holiday.query.all
     return render_template('input.html')
 
 
