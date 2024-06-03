@@ -9,9 +9,9 @@
 # app = Flask(__name__)
 # app.config.from_object('flask_blog.config')
 
-from flask_blog import app
+from holiday import app
+# from flask_blog import app
 
 if __name__ == '__main__':
     app.run()
 
-import flask_blog.views.entries
