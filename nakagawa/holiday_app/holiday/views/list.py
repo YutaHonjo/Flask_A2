@@ -3,7 +3,7 @@ from holiday import app
 from holiday import db
 from holiday.models.mst_holiday import Holiday
 
-# 各メンテナンス
+# リスト一覧（list.htmlを返す）
 @app.route('/list', methods = ['GET'])
 def list_holiday():
     holidays = Holiday.query.all()
