@@ -2,7 +2,7 @@
 {% block body %}
 
 <main>
-    <form action="{{ url_for('input') }}" method=post>
+    <form action="{{ url_for('maintenance_date') }}" method=post>
         <div class="form-group">
             <label for="InputTitle">祝日 日付</label>
             <input type="date" class="form-control" id="holiday" name="holiday" value="{{ input }}">
@@ -23,7 +23,7 @@
 <br>
 <br>
 
-<form action="{{ url_for('input') }}" method="post">
+<form action="{{ url_for('list') }}" method="post">
     <button type="submit" class="btn btn-secondary">一覧出力</button>
 </form>
 
