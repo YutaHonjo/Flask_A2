@@ -1,0 +1,20 @@
+<!-- 新規登録・更新 -->
+<!-- 処理結果 -->
+{% extends "layout.html" %}<!--layout.htmlを継承する-->
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>処理結果</title>
+</head>
+<body>
+    <p></p>
+    <p>{{holiday}}は、{{holiday_text}}に更新されました。</p>
+    <form action="{{ url_for('input') }}" method="get">
+        <div class = ank>
+            <button type="submit" class="btn btn-primary">戻る</button>
+        </div>
+    </form>
+</body>
+</html>
+{% endblock %}
