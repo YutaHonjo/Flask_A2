@@ -14,7 +14,6 @@
       <td>{{holiday.holi_date}}</td>
       <td>{{holiday.holi_text}}</td>
     </tr>
-
 {% else %}
     <tr>
         <td>データがありません</td>
@@ -24,5 +23,11 @@
 
     </tbody>
 </table>
+
+<br><br>
+
+<a class = add-holiday, href="{{url_for('show_holiday')}}">
+  <button type = 'submit' class = 'btn btn-primary'>戻る</button>
+</a>
 
 {% endblock %}

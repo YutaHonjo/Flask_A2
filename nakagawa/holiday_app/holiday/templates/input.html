@@ -1,9 +1,11 @@
 {% extends 'layout.html' %}
 {% block body %}
-<form action = "{{url_for('show_holiday')}}" method = post class = add-holiday>
+<!-- 入力画面 -->
+<form action = "{{url_for('maintenance_holiday')}}" method = post class = add-holiday>
+    <!-- 入力 -->
     <div class = 'form-group'>
         <label for = 'InputTitle'>祝日 日付</label>
-        <input type = 'date' class = 'form-control' id = 'InputTitle' name = holiday>
+        <input type = 'date' class = 'form-control' id = 'InputTitle' name = holi_date>
     </div>
 
     <div class = 'form-group'>
@@ -11,19 +13,18 @@
         <input type = 'text' class = 'form-control' id = 'InputTitle' name =holi_text>
     </div>
 
+    <!-- ボタン -->
     <div class = 'btn-group'>
-        <form action = "{{url_for('show_holiday')}}" method = post>
-            <button typr = 'submit' class = 'btn btn-primary' name = 'button' value = 'insert_update'>新規登録・更新</button>
-        </form>
-        
-        <form action = "{{url_for('show_holiday')}}" method = post>
-            <button typr = 'submit' class = 'btn btn-danger' name = 'button' value = 'delete' style = 'margin-left:5px'>削除</button>
-        </form>
+        <button typr = 'submit' class = 'btn btn-primary' name = 'button' value = 'insert_update'>新規登録・更新</button>
     </div>
 
-    <br><br>
-    <form action = "{{url_for('show_holiday')}}" method = get class = add-holiday>
-        <button type = 'submit' class = 'btn btn-secondary'>一覧出力</button>
-    </form>
+    <div class = 'btn-group'>
+        <button typr = 'submit' class = 'btn btn-danger' name = 'button' value = 'delete' style = 'margin-left:10px'>削除</button>
+    </div>
 </form>
+
+<br><br>
+<a class = add-holiday, href="{{url_for('list_holiday')}}">
+    <button type = 'submit' class = 'btn btn-secondary'>一覧出力</button>
+</a>
 {% endblock %}
