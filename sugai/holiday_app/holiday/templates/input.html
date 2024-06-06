@@ -30,5 +30,17 @@
     </div>
 
 
+    {% if flag == 4 %}
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-info" role="alert">
+            <p>{{message}}</p>
+        </div>
+        {% endfor %}
+        
+    {% endif %}
+
+    
+
+
 </form>
 {% endblock %}

@@ -7,4 +7,4 @@ app.config.from_object('holiday.config')  #flask_blofフォルダ内のconfig.py
 
 db = SQLAlchemy(app)
 
-from holiday.view import input   #必要
+from holiday.view import input ,list  #必要
