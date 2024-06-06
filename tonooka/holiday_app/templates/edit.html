@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Holiday</title>
+</head>
+<body>
+    <h1>Edit Holiday</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.holi_date.label }}<br>
+            {{ form.holi_date(size=32) }}
+        </p>
+        <p>
+            {{ form.holi_text.label }}<br>
+            {{ form.holi_text(size=64) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <a href="{{ url_for('index') }}">Back to list</a>
+</body>
+</html>
